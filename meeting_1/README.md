@@ -1,7 +1,7 @@
 # Meeting 1
 Covers common conventions, arrays, hashes, enumerable
 
-# Slides
+## Slides
 The meeting slides can be found [here](https://slides.com/mrjman/meeting-1)
 
 ## Exercises
