@@ -1,5 +1,5 @@
 # Meeting 3
-Covers Blocks, Procs, and Lambdas
+Classes and modules
 
 # Slides
 The meeting slides can be found [here](https://slides.com/mrjman/meeting-3)
