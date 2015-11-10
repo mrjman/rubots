@@ -22,7 +22,7 @@ puts ''
 puts 'Doing replacement with method missing'
 formatter = replacement_with_method_missing(document_2)
 puts ''
-puts document.content
+puts document_2.content
 
 puts ''
 puts 'Formatter variables'

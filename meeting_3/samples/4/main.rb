@@ -22,4 +22,4 @@ puts ''
 puts 'Doing replacement with method missing'
 replacement_with_method_missing(document_2)
 puts ''
-puts document.content
+puts document_2.content
