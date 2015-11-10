@@ -1,6 +1,7 @@
 class Student < Person
   include Actions
   include StudentActions
+
   attr_accessor :school
 
   def initialize(*args)

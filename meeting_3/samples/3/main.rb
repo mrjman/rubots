@@ -1,3 +1,8 @@
+# Demonstration of:
+# Modules
+# Method overriding
+# Class extension through modules
+# Open classes
 require_relative 'actions.rb'
 require_relative 'student_actions.rb'
 require_relative 'teacher_actions.rb'

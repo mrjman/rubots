@@ -1,3 +1,8 @@
+# Demonstration of:
+# Inheritance
+# Method overriding
+# Different initializers
+# Helpers for get/set methods
 require 'pp'
 require_relative 'person.rb'
 require_relative 'student.rb'
