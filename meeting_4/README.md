@@ -10,6 +10,8 @@ We are diving straight into our first rails application by building a simple hub
 If you have trouble installing rails because of nokogiri try to first install
 libxml2 using homebrew (`brew install libxml2`) then try installing rails using `gem install rails -- --use-system-libraries --with-xml=/usr/local/Cellar/libxml2/`
 
+For user authentication we will be using [has_secure_password](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html). Please see the documentation in the link for more information on setup.
+
 ## RubotHub specification
 __Data Models__  
 User:
