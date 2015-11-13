@@ -1,0 +1,6 @@
+<% flash_keys = {notice: 'info', alert: 'warning'} %>
+<% flash.each do |key, value| %>
+  <div class="alert-box <%= flash_keys.fetch(key, key) %> radius">
+    <%= value %>
+  </div>
+<% end %>
