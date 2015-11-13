@@ -1,0 +1,7 @@
+<%= form_for @user, url: signup_path do |f| %>
+  <%= render 'form_input', f: f, input_field: :first_name %>
+  <%= render 'form_input', f: f, input_field: :last_name %>
+  <%= render 'form_input', f: f, input_field: :email %>
+  <%= render 'form_input', f: f, input_field: :password %>
+  <%= f.submit 'Signup', class: 'button right' %>
+<% end %>
