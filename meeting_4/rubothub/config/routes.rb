@@ -53,5 +53,13 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  resources :users, only: [:show]
+
+  get :login, to: 'sessions#new'
+  post :login, to: 'sessions#create'
+  get :signup, to: 'registrations#new'
+  post :signup, to: 'registrations#create'
+
   root 'home#show'
 end
