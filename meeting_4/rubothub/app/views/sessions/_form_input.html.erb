@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="small-3 columns">
+    <%= f.label input_field, class: 'inline' %>
+  </div>
+  <div class="small-9 columns">
+    <% if input_field == :password %>
+      <%= f.password_field input_field %>
+    <% else %>
+      <%= f.text_field input_field %>
+    <% end %>
+  </div>
+</div>
