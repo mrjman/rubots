@@ -1,0 +1,23 @@
+<h2>Sign Up</h2>
+
+<%= form_for @user, url: {action: "create"} do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :first_name, :placeholder => :first_name %>
+  <%= f.text_field :last_name, :placeholder => :last_name %>
+  <%= f.text_field :email, :placeholder => :email %>
+  <%= f.text_field :password, :placeholder => :password %>
+  <%= f.submit "Create" %>
+<% end %>
