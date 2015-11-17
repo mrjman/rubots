@@ -54,4 +54,10 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root 'home#show'
+
+  get '/login' => 'login#show'
+
+  get '/signup' => 'signup#new'
+  post '/signup' => 'signup#create'
+
 end
