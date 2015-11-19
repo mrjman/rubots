@@ -1,4 +1,12 @@
 <h2>Signup here</h2>
+<% if @user.errors.present? %>
+  <ul>
+    <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @user, url: signup_path do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
@@ -10,7 +18,10 @@
   <%= f.text_field :email %>
 
   <%= f.label :password %>
-  <%= f.text_field :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confim %>
+  <%= f.password_field :password_confirm %>
 
   <%= f.submit %>
 <% end %>
