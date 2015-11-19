@@ -1,0 +1,17 @@
+<h2>Log In</h2>
+
+<%= form_for @user, url: login_path do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field :email, :placeholder => :email %>
+  <%= f.password_field :password, :placeholder => :password %>
+  <%= f.submit "Log In" %>
+<% end %>
