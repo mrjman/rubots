@@ -55,9 +55,9 @@ Rails.application.routes.draw do
   #   end
   root 'home#show'
 
-  get '/login' => 'login#show'
-
+  get '/login' => 'login#new'
+  post '/login' => 'login#create'
   get '/signup' => 'signup#new'
   post '/signup' => 'signup#create'
-
+  resources :users, only: [ :show ]
 end
