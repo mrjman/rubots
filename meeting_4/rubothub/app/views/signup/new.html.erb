@@ -17,7 +17,8 @@
 
   <%= f.text_field :first_name, :placeholder => :first_name %>
   <%= f.text_field :last_name, :placeholder => :last_name %>
-  <%= f.text_field :email, :placeholder => :email %>
+  <%= f.email_field :email, :placeholder => :email %>
   <%= f.password_field :password, :placeholder => :password %>
+  <%= f.password_field :password_confirmation, :placeholder => :password_confirmation %>
   <%= f.submit "Create" %>
 <% end %>

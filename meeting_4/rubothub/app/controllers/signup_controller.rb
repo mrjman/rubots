@@ -6,10 +6,16 @@ class SignupController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    if @user.save
-      redirect_to root_path
+    if params[:user][:password] == params[:user][:password_confirmation]
+      if @user.save
+        redirect_to root_path
+      else
+        render :new
+      end
     else
-      render 'new'
+      flash.now[:alert] = 'Passwords do not match.'
+
+      render :new
     end
 
   end
