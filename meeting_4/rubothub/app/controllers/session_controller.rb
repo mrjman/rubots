@@ -1,4 +1,4 @@
-class SignupController < ApplicationController
+class SessionController < ApplicationController
   def new
     @user = User.new
   end
@@ -8,8 +8,9 @@ class SignupController < ApplicationController
 
     if passwords_match
       if @user.save
+        session[:current_user_id] = @user.id
         flash.notice = "Success"
-        redirect_to :login
+        redirect_to user_path @user
       else
         render :new
       end

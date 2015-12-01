@@ -57,7 +57,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'login#new'
   post '/login' => 'login#create'
-  get '/signup' => 'signup#new'
-  post '/signup' => 'signup#create'
-  resources :users, only: [ :show ]
+  get '/signup' => 'session#new'
+  post '/signup' => 'session#create'
+  resources :users, only: [ :edit, :show, :update ]
 end
