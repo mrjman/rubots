@@ -11,19 +11,19 @@ class UsersController < ApplicationController
   end
 
   def update
-  	@user = @current_user
+    @user = @current_user
 
-  	if @user.update_attributes(user_params)
-  		redirect_to user_path @user
-  	else
-  	render :edit
-  end
+    if @user.update_attributes(user_params)
+      redirect_to user_path @user
+    else
+      render :edit
+    end
   end
 
-private
-	def check_user
-		redirect_to login_path unless params[:id] == @current_user.try(:id).to_s
-	end
+  private
+  def check_user
+    redirect_to login_path unless params[:id] == @current_user.try(:id).to_s
+  end
 
 
   def user_params
