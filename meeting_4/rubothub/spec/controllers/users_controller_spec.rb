@@ -5,6 +5,10 @@ RSpec.describe UsersController, type: :controller do
     User.create(first_name: "billy", last_name: "bob", email: "bill@bob.com", password: "123")
   end
 
+  let(:other_user) do
+    User.create(first_name: "jow", last_name: "fadskds", email: "x@a.net", password: "abc")
+  end
+
   describe '#show' do
     before do
       get :show, id: user.id
@@ -32,7 +36,7 @@ RSpec.describe UsersController, type: :controller do
 
     context 'when logged in' do
       before do
-        post :login, email: user.email, password: user.password
+        session[:current_user_id] = user.id        
       end
 
       describe 'as current user' do
@@ -47,10 +51,11 @@ RSpec.describe UsersController, type: :controller do
         end
 
         it 'should not be able to view not my edit path' do
+          get :edit, id: other_user.id
 
+          expect(response).to redirect_to login_path
         end
       end
     end
-
   end
 end
