@@ -3,7 +3,7 @@ FactoryGirl.define do
     first_name "Rob"
     last_name "Allen"
     email "test@test.com"
-    password  { Faker::Internet.password }
+    password  { Faker::Internet.password + '!4n'}
   end
 
 end
