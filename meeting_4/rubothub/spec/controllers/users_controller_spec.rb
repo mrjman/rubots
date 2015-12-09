@@ -1,3 +1,5 @@
+
+
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
@@ -15,7 +17,7 @@ RSpec.describe UsersController, type: :controller do
     context 'invalid params'
     before do
       get :show, id: -1
-      
+
     end
   end
 end
