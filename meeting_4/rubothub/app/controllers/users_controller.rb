@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       redirect_to user_path(@user), notice: 'User updated!'
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
