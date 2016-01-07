@@ -3,3 +3,8 @@
 <p>First Name: <%= @user.first_name %></p>
 <p>Last Name: <%= @user.last_name %></p>
 <p>Email: <%= @user.email %></p>
+
+<% @user.projects.each do |p| %>
+  <h3><%= p.title %></h3>
+  <p><%= p.description %></p>
+<% end %>

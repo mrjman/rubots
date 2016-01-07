@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe SignupController, type: :controller do
+RSpec.describe SessionController, type: :controller do
   describe '#new' do
     before do
       get :new
