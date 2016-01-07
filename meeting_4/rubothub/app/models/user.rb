@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
   validates :password,
     format: { with: /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,}$/, multiline: true },
     allow_blank: true
+
+  has_many :user_projects
+  has_many :projects, through: :user_projects
 end
