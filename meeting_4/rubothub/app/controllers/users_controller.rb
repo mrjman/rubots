@@ -13,10 +13,12 @@ class UsersController < ApplicationController
   def update
     @user = @current_user
 
+    redirect_to(login_path) and return unless @user.present?
+
     if @user.update_attributes(user_params)
       redirect_to user_path @user
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
