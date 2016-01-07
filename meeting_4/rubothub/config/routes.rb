@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create]
   resources :users, only: [:show, :edit, :update]
+  resources :projects, only: [:show]
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
