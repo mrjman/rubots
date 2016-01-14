@@ -5,3 +5,18 @@
 <p>Email: <%= @user.email %></p>
 
 <%= link_to 'Edit', edit_user_path %>
+
+<h3>Projects</h3>
+
+<ul>
+  <% @user.projects.each do |project| %>
+    <li>
+      <p>
+        <%= project.title %> - <%= link_to 'View', project_path(project) %>
+      </p>
+      <p>
+        <%= project.description %>
+      </p>
+    </li>
+  <% end %>
+</ul>

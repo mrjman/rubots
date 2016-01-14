@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :user_project do
-    user nil
-project nil
+    association :user
+    association :project
   end
-
 end
