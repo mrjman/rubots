@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action(:check_user, only: [:edit]) 
+  before_action(:check_user, only: [:edit])
 
   def edit
     @user = User.find params[:id]
