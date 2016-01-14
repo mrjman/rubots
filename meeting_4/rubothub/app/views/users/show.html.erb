@@ -5,6 +5,6 @@
 <p>Email: <%= @user.email %></p>
 
 <% @user.projects.each do |p| %>
-  <h3><%= p.title %></h3>
+  <h3><%= link_to p.title, project_path(p) %></h3>
   <p><%= p.description %></p>
 <% end %>

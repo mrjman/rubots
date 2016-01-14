@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :project do
-    title "MyString"
-    description "MyString"
+    title { Faker::Company.name }
+    description { Faker::Company.bs }
   end
 end

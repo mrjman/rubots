@@ -60,4 +60,5 @@ Rails.application.routes.draw do
   get '/signup' => 'session#new'
   post '/signup' => 'session#create'
   resources :users, only: [ :edit, :show, :update ]
+  resources :projects, only: [ :edit, :show, :update ]
 end
