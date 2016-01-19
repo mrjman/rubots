@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find params[:id]
+
+    @project = @user.projects.build
   end
 
   def show

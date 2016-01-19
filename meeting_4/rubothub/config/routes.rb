@@ -59,6 +59,9 @@ Rails.application.routes.draw do
   post '/login' => 'login#create'
   get '/signup' => 'session#new'
   post '/signup' => 'session#create'
-  resources :users, only: [ :edit, :show, :update ]
+  resources :users, only: [ :edit, :show, :update ] do
+    resources :projects, only: [:create]
+  end
+
   resources :projects, only: [ :edit, :show, :update ]
 end

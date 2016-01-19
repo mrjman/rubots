@@ -1,0 +1,10 @@
+<div>
+	<h1><%= @project.title %></h1>
+	<h2><%= @project.description %><h2>
+		<div>
+			<h3>Users in this project</h3>
+			<% @project.users.each do |u| %>
+			  <h3><%= link_to "#{u.first_name} #{u.last_name}", user_path(u) %></h3>
+			<% end %>
+		</div>
+</div>
